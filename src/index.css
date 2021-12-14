@@ -1,0 +1,176 @@
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+/*Background*/
+.background{
+  min-height: 100vh;
+  background: #000;
+}
+
+/*Header*/
+
+.header{
+  color: #fff;
+  font-size: 35px;
+  text-shadow: rgba(180, 180, 180, 0.68) 0px 8px 24px;
+}
+
+/*Form*/
+
+.form{
+  background-color: #fff;
+  border-radius: 25px;
+  max-width: 500px;
+}
+
+.form-input{
+  border: none;
+  outline: none;
+  padding-left: 22px;
+  border-radius: 25px;
+  height: 40px;
+  color: gray;
+  font-size: 18px;
+  width: 100%;
+}
+
+.form-input:focus{
+  color: #000;
+}
+
+.form-input::placeholder{
+  color: gray;
+}
+
+.form-button{
+  border-radius: 25px;
+  border: none;
+  background: none;
+  height: 40px;
+  width: 60px;
+  color: gray;
+  outline: none;
+  font-size: 18px;
+}
+
+.form-button:hover{
+  color: #000;
+}
+
+/*Today*/
+
+.today{
+  color: #fff;
+  background-color: rgb(20, 20, 20);
+  border: 1px solid rgb(40, 40, 40);
+  box-shadow: rgba(70, 70, 70, 0.35) 0px 5px 15px;
+  border-radius: 20px;
+}
+
+.weather-icon{
+  width: 135px;
+}
+
+.current-date{
+  font-size: 20px;
+}
+
+.current-description{
+  font-size: 20px;
+}
+
+.current-degree{
+  font-size: 65px;
+}
+
+.fa-map-marker-alt{
+  font-size: 20px;
+}
+
+/*Information*/
+
+.information{
+  color: #fdc500;
+}
+
+.information:hover{
+  color: #fff;
+}
+
+/*Days*/
+
+.days{
+  background-color: rgb(20, 20, 20);
+  border: 1px solid rgb(40, 40, 40);
+  box-shadow: rgba(70, 70, 70, 0.35) 0px 5px 15px;
+  border-radius: 20px;
+  color: #fff;
+}
+
+.days:hover{
+  background-color: #fdc500;
+}
+
+.days-icon{
+  width: 60px;
+}
+
+.days-weekday{
+  font-size: 18px;
+}
+
+/*Loader*/
+
+.lds-facebook {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-facebook div {
+  display: inline-block;
+  position: absolute;
+  left: 8px;
+  width: 16px;
+  background: #ffba00;
+  animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 0.6) infinite;
+  box-shadow: rgba(148, 148, 148, 0.5) 0px 8px 24px;
+}
+.lds-facebook div:nth-child(1) {
+  left: 8px;
+  animation-delay: -0.24s;
+}
+.lds-facebook div:nth-child(2) {
+  left: 32px;
+  animation-delay: -0.12s;
+}
+.lds-facebook div:nth-child(3) {
+  left: 56px;
+  animation-delay: 0;
+}
+@keyframes lds-facebook {
+  0% {
+    top: 8px;
+    height: 64px;
+  }
+  50%, 100% {
+    top: 24px;
+    height: 32px;
+  }
+}
+
+/*Error*/
+
+.error{
+  text-shadow: rgba(148, 148, 148, 0.5) 0px 8px 24px;
+}
+
+.error h3{
+  color: rgb(175, 175, 175);
+}
+
+.error i{
+  color: #fdc500;
+  font-size: 22px;
+}
