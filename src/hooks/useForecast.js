@@ -25,7 +25,7 @@ const useForecast = () => {
 
     //If the search doesn't exist, return the Error component
     if (!data || data.length === 0) {
-      setIsError(true);
+      setIsError('There is no such location');
       setIsLoading(false);
       return;
     }
@@ -38,7 +38,7 @@ const useForecast = () => {
     const { data } = await axios(`${REQUEST_URL}/${woeid}`);
     //If the search doesn't exist, return the Error component
     if (!data || data.length === 0) {
-      setIsError(true);
+      setIsError('Something went wrong');
       setIsLoading(false);
       return;
     }
@@ -73,7 +73,7 @@ const useForecast = () => {
     if (!response?.woeid) return;
 
     const data = await getForecastData(response.woeid);
-    //If theres is not data, return
+    //If there is not data, return
     if (!data) return;
 
     gatherForecastData(data);

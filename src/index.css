@@ -5,18 +5,23 @@
 /*Background*/
 .background{
   min-height: 100vh;
-  background: #000;
+  background: #6FCAF9;
 }
 
 /*Header*/
 
 .header{
-  color: #fff;
+  color: rgb(12, 13, 70);
   font-size: 35px;
-  text-shadow: rgba(180, 180, 180, 0.68) 0px 8px 24px;
+  text-shadow: rgba(128, 128, 128, 0.68) 0px 8px 24px;
 }
 
 /*Form*/
+
+.instruction{
+  font-size: 20px;
+  color: rgb(12, 13, 70);
+}
 
 .form{
   background-color: #fff;
@@ -30,7 +35,6 @@
   padding-left: 22px;
   border-radius: 25px;
   height: 40px;
-  color: gray;
   font-size: 18px;
   width: 100%;
 }
@@ -40,7 +44,7 @@
 }
 
 .form-input::placeholder{
-  color: gray;
+  color: #fdcb12;
 }
 
 .form-button{
@@ -49,7 +53,7 @@
   background: none;
   height: 40px;
   width: 60px;
-  color: gray;
+  color: #fdcb12;
   outline: none;
   font-size: 18px;
 }
@@ -62,7 +66,7 @@
 
 .today{
   color: #fff;
-  background-color: rgb(20, 20, 20);
+  background-color: #18181B;
   border: 1px solid rgb(40, 40, 40);
   box-shadow: rgba(70, 70, 70, 0.35) 0px 5px 15px;
   border-radius: 20px;
@@ -91,7 +95,7 @@
 /*Information*/
 
 .information{
-  color: #fdc500;
+  color: #FFC107;
 }
 
 .information:hover{
@@ -101,15 +105,14 @@
 /*Days*/
 
 .days{
-  background-color: rgb(20, 20, 20);
-  border: 1px solid rgb(40, 40, 40);
+  background-color: #18181B;
   box-shadow: rgba(70, 70, 70, 0.35) 0px 5px 15px;
   border-radius: 20px;
   color: #fff;
 }
 
 .days:hover{
-  background-color: #fdc500;
+  background-color: #FDCB12;
 }
 
 .days-icon{
@@ -133,7 +136,7 @@
   position: absolute;
   left: 8px;
   width: 16px;
-  background: #ffba00;
+  background: #FDCB12;
   animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 0.6) infinite;
   box-shadow: rgba(148, 148, 148, 0.5) 0px 8px 24px;
 }
@@ -167,10 +170,26 @@
 }
 
 .error h3{
-  color: rgb(175, 175, 175);
+  color: #FDCB12;
 }
 
 .error i{
-  color: #fdc500;
+  color: #FDCB12;
   font-size: 22px;
+}
+
+/*Reload*/
+
+.reload{
+  background: #FDCB12;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 5px;
+  margin: 18px 0px;
+}
+
+.reload:hover{
+  background: none;
+  outline: 2px solid #FDCB12;
+  color: #FDCB12;
 }

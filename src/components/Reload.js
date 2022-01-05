@@ -1,3 +1,5 @@
+import "../index.css";
+
 export default function Reload() {
     
   const handleReload = () => {
@@ -6,7 +8,7 @@ export default function Reload() {
 
   return (
     <button
-      className="btn btn-outline-warning mt-2 mb-5"
+      className="reload"
       onClick={handleReload}
     >
       Reload Page
