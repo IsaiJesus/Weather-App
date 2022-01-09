@@ -11,12 +11,14 @@ export default function Form({ submitSearch }) {
   const onSubmit = (e) => {
     //In case there is no information, return, and do an alert from React-toastify
     e.preventDefault();
-    if (!location || location === "") {
+    
+    const newLocation = location.trim();
+    if (!newLocation || newLocation === "") {
       toast.warning("You must fill the field!");
       return;
     }
     //return the text from the input
-    submitSearch(location);
+    submitSearch(newLocation);
   };
 
   return (

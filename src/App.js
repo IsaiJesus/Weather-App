@@ -33,7 +33,6 @@ function App() {
           <>
             {!isLoading && <Form submitSearch={onSubmit} />}
             {isError && <Error message={isError}/>}
-            {isError && <Reload />}
             {isLoading && <Loader />}
           </>
         )}
