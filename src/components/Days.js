@@ -3,7 +3,7 @@ import "../index.css";
 //Data from Today component
 export default function Days({ weekday, temperature, imgUrl }) {
   //URL for the weather icon from the API
-  const imgUrlBase = "http://openweathermap.org/img/wn/";
+  const imgUrlBase = "https://openweathermap.org/img/wn/";
 
   return (
     <div className="col p-2 text-center">

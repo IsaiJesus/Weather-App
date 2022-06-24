@@ -4,7 +4,7 @@ import Details from "./Details";
 
 //Data from App component
 export default function Forecast({ currentDay, currentDayDetails, days }) {
-  const imgUrlBase = "http://openweathermap.org/img/wn/";
+  const imgUrlBase = "https://openweathermap.org/img/wn/";
 
   return (
     <>
