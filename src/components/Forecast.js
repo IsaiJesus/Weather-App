@@ -1,10 +1,10 @@
 import "../index.css";
-import Days from "../components/Days";
+import Days from "./Days";
 import Details from "./Details";
 
 //Data from App component
-export default function Today({ currentDay, currentDayDetails, days }) {
-  const imgUrlBase = "https://www.metaweather.com/static/";
+export default function Forecast({ currentDay, currentDayDetails, days }) {
+  const imgUrlBase = "http://openweathermap.org/img/wn/";
 
   return (
     <>
@@ -13,7 +13,7 @@ export default function Today({ currentDay, currentDayDetails, days }) {
           <div className="col text-center align-items-center">
             <img
               className="weather-icon"
-              src={`${imgUrlBase}img/weather/${currentDay.imgUrl}.svg`}
+              src={`${imgUrlBase}${currentDay.imgUrl}.png`}
               alt={currentDay.weekday}
             />
             <h3 className="m-0 pt-3 pb-1">{currentDay.weekday}</h3>
@@ -39,9 +39,9 @@ export default function Today({ currentDay, currentDayDetails, days }) {
         </div>
       </div>
       <div className="container mt-4 mb-2">
-        <div className="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 p-0">
+        <div className="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 p-0 justify-content-center">
           {days.map(day => (
-            <Days key={day.weekday} {...day} />
+            <Days key={day.key} {...day} />
           ))}
         </div>
       </div>

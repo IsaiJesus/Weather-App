@@ -1,5 +1,5 @@
 import Form from "./components/Form";
-import Today from "./components/Today";
+import Forecast from "./components/Forecast";
 import Header from "./components/Header";
 import Loader from "./components/Loader";
 import Error from "./components/Error";
@@ -22,7 +22,7 @@ function App() {
         <Header />
         {forecast ? (
           <>
-            <Today
+            <Forecast
               currentDay={forecast.currentDay}
               currentDayDetails={forecast.currentDayDetails}
               days={forecast.upcomingDays}
@@ -33,7 +33,7 @@ function App() {
           <>
             {!isLoading && <Form submitSearch={onSubmit} />}
             {isError && <Error message={isError}/>}
-            {isLoading && <Loader />}
+            {isLoading && <Loader/>}
           </>
         )}
       </div>

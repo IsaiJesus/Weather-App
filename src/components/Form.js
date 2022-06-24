@@ -11,7 +11,7 @@ export default function Form({ submitSearch }) {
   const onSubmit = (e) => {
     //In case there is no information, return, and do an alert from React-toastify
     e.preventDefault();
-    
+
     const newLocation = location.trim();
     if (!newLocation || newLocation === "") {
       toast.warning("You must fill the field!");
@@ -23,7 +23,9 @@ export default function Form({ submitSearch }) {
 
   return (
     <form className="d-flex flex-column text-center align-items-center justify-content-center my-4">
-      <h4 className="instruction pb-4 m-0">Write the name of a city to know what's the weather like in that city.</h4>
+      <h4 className="instruction pb-4 m-0">
+        Write the name of a city to know what's the weather like in that city.
+      </h4>
       <div className="form d-flex align-items-center justify-content-center my-2">
         <input
           type="text"

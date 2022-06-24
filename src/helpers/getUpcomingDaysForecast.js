@@ -1,14 +1,14 @@
-import moment from 'moment';
-
-//This substring reduces the date to three letters
-const getWeekday = (date) => moment(date).format('dddd').substring(0, 3);
+const dayName = (date) => new Date(date * 1000).toLocaleDateString("en", {
+  weekday: "short",
+});
 
 //Fill the data for each object
 const getUpcomingDaysForecast = (data) =>
-    data.slice(1).map(day => ({
-        imgUrl: day.weather_state_abbr,
-        temperature: Math.round(day.max_temp),
-        weekday: getWeekday(day.applicable_date),
-    }));
+  data.slice(1, 7).map((day) => ({
+    imgUrl: day.weather[0].icon,
+    temperature: Math.round(day.temp.day),
+    weekday: dayName(day.dt),
+    key: day.dt,
+  }));
 
 export default getUpcomingDaysForecast;

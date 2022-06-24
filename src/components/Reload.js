@@ -11,7 +11,7 @@ export default function Reload() {
       className="reload"
       onClick={handleReload}
     >
-      Reload Page
+      Search for another location
     </button>
   );
 }
