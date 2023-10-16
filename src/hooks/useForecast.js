@@ -5,7 +5,7 @@ import getCurrentDayDetails from "../helpers/getCurrentDayDetails";
 import getUpcomingDaysForecast from "../helpers/getUpcomingDaysForecast";
 import formattedDate from "../helpers/formattedDate";
 
-const BASE_URL = "http://api.weatherapi.com/v1/forecast.json";
+const BASE_URL = "https://api.weatherapi.com/v1/forecast.json";
 const API_KEY = "?key=6d2fe9f4352346dbbba14010231510";
 
 const useForecast = () => {
