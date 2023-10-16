@@ -17,7 +17,7 @@ const useForecast = () => {
     try {
       setIsLoading(true);
       const { data } = await axios(
-        `${BASE_URL}${API_KEY}&q=${location}&days=7&aqi=no&alerts=no`
+        `${BASE_URL}${API_KEY}&q=${location}&days=8&aqi=no&alerts=no`
       );
       return data;
     } catch (err) {
