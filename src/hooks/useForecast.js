@@ -49,6 +49,13 @@ const useForecast = () => {
       );
 
       const upcomingDays = getUpcomingDaysForecast(data.forecast.forecastday);
+      console.log(data.forecast.forecastday.slice(2, 8).map(item => ({
+        code: item.day.condition.code,
+        text: item.day.condition.text,
+        icon: item.day.condition.icon,
+        temperature: item.hour[12].temp_c,
+        weekday: formattedDate(item.date)
+      })))
 
       setForecast({ currentDay, currentDayDetails, upcomingDays });
     }

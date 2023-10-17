@@ -22,7 +22,7 @@ function App() {
   return (
     <div className="bg-dark">
       <Container className="px-3">
-        <Col>
+        <Col style={{minHeight: "100vh"}}>
           <Header submitSearch={handleSubmit} isLoading={isLoading} />
           {forecast && !isError ? (
             <>
@@ -34,11 +34,11 @@ function App() {
             </>
           ) : (
             <div
-              className="bg-primary-subtle rounded-4 d-flex align-items-center justify-content-center"
+              className="bg-primary-subtle p-3 rounded-4 d-flex align-items-center justify-content-center"
               style={{ height: "400px" }}
             >
               <h1 className="fs-2 text-center fw-bold">
-                Something went wrong, check your internet connection. 🤕
+                Something went wrong, type another location or check your internet connection. 🤕
               </h1>
             </div>
           )}

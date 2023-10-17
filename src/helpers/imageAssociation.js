@@ -11,11 +11,11 @@ import rain from '../assets/rain.png';
 const imageAssociation = (code) => {
   const associations = [
     { "code": 1000, "img": sunny },
-    { "code": 1003, "img":  clearSky},
-    { "code": 1006, "img": windy },
+    { "code": 1003, "img": clearSky},
+    { "code": 1006, "img": cloud },
     { "code": 1009, "img": cloud },
     { "code": 1030, "img": cloudyDay },
-    { "code": 1063, "img": downpour },
+    { "code": 1063, "img": cloudyDay },
     { "code": 1066, "img": snowfall },
     { "code": 1069, "img": darkAndStormy },
     { "code": 1072, "img": cloud },
@@ -62,7 +62,7 @@ const imageAssociation = (code) => {
 
   const association = associations.find(item => item.code === code);
 
-  return association ? association.img : null;
+  return association ? association.img : sunny;
 };
 
 export default imageAssociation;
