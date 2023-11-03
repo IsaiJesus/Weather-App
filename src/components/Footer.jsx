@@ -9,7 +9,7 @@ export default function Footer() {
         Github
       </a>
       <a
-        href="https://www.linkedin.com/in/isai-jes%C3%BAs-tapia-alc%C3%A1zar-0a9b88237/"
+        href="https://www.linkedin.com/in/isai-jesus/"
         target="_blank"
         className="btn btn-info mx-2 fw-semibold"
       >
