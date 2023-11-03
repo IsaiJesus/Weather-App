@@ -1,3 +1,22 @@
+/* SCROLLBAR */
+::-webkit-scrollbar{
+  height: 10px;
+  width: 10px;
+}
+
+::-webkit-scrollbar-track{
+  background-color: #212529;
+}
+
+::-webkit-scrollbar-thumb{
+  background: #161719;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background: #0f0f10;
+}
+
 /* HTML: <div class="loader"></div> */
 .loader {
   width: 36px;

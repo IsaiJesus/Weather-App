@@ -4,9 +4,10 @@ import getCurrentDayForecast from "../helpers/getCurrentDayForecast";
 import getCurrentDayDetails from "../helpers/getCurrentDayDetails";
 import getUpcomingDaysForecast from "../helpers/getUpcomingDaysForecast";
 import formattedDate from "../helpers/formattedDate";
+import getUpcomingHoursForecast from "../helpers/getUpcomingHoursForecast";
 
 const BASE_URL = "https://api.weatherapi.com/v1/forecast.json";
-const API_KEY = "?key=6d2fe9f4352346dbbba14010231510";
+const API_KEY = import.meta.env.VITE_API_KEY;
 
 const useForecast = () => {
   const [isError, setIsError] = useState(false);
@@ -17,7 +18,7 @@ const useForecast = () => {
     try {
       setIsLoading(true);
       const { data } = await axios(
-        `${BASE_URL}${API_KEY}&q=${location}&days=8&aqi=no&alerts=no`
+        `${BASE_URL}?key=${API_KEY}&q=${location}&days=3&aqi=no&alerts=no`
       );
       return data;
     } catch (err) {
@@ -49,15 +50,16 @@ const useForecast = () => {
       );
 
       const upcomingDays = getUpcomingDaysForecast(data.forecast.forecastday);
-      console.log(data.forecast.forecastday.slice(2, 8).map(item => ({
-        code: item.day.condition.code,
-        text: item.day.condition.text,
-        icon: item.day.condition.icon,
-        temperature: item.hour[12].temp_c,
-        weekday: formattedDate(item.date)
-      })))
+      const upcomingHours = getUpcomingHoursForecast(
+        data.forecast.forecastday[0].hour
+      );
 
-      setForecast({ currentDay, currentDayDetails, upcomingDays });
+      setForecast({
+        currentDay,
+        currentDayDetails,
+        upcomingDays,
+        upcomingHours,
+      });
     }
   };
 

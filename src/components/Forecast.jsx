@@ -17,16 +17,16 @@ export default function Forecast({ forecast, details }) {
           src={icon}
           alt="Weather Icon"
         />
-        <h2
+        <h1
           className="fw-bold z-1 mb-1"
           style={{ fontSize: "5rem", letterSpacing: "-2px" }}
         >
           {forecast.temp} °C
-        </h2>
-        <p className="mb-3 fw-medium fs-5">{forecast.text}</p>
-        <h3 className="fs-2 z-1 text-center fw-bold d-flex align-items-center">
+        </h1>
+        <p className="mt-1 mb-3 fw-medium fs-5">{forecast.text}</p>
+        <h2 className="fs-1 mb-3 z-1 text-center fw-bold d-flex align-items-center">
           {forecast.city} <FaMapMarkerAlt className="ms-1" />
-        </h3>
+        </h2>
         <p className="fs-4 fw-medium mb-5 z-1">{forecast.date}</p>
         <div className="w-100">
           {details.map((item) => (

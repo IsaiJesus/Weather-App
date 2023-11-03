@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import useForecast from "./hooks/useForecast";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
+import Hours from "./components/Hours";
 
 function App() {
   const { isError, isLoading, forecast, submitRequest } = useForecast();
@@ -30,6 +31,7 @@ function App() {
                 forecast={forecast.currentDay}
                 details={forecast.currentDayDetails}
               />
+              <Hours hours={forecast.upcomingHours}/>
               <Days days={forecast.upcomingDays}/>
             </>
           ) : (
